@@ -8,7 +8,6 @@ void Point::displayIntoFile(ostream& out)
 	out << "X:" << x << " Y: " << y <<  endl;
 }
 
-
 void Point::display()
 {
 	cout << "X:" << x << " Y: " << y << endl;

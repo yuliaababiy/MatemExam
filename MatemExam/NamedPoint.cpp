@@ -6,12 +6,12 @@ NamedPoint::NamedPoint(int x, int y, char name)
 
 void NamedPoint::displayIntoFile(ostream& out)
 {
-	out << " Enter x:" << x << " Enter y: " << y << " Enter name: " << name << endl;
+	out << "X:" << x << " Y: " << y << " Name: " << name << endl;
 }
 
 void NamedPoint::display()
 {
-	cout << " Enter x:" << x << " Enter y: " << y << " Enter name: " << name << endl;
+	cout << "X:" << x << " Y: " << y << " Name: " << name << endl;
 }
 
 void NamedPoint::setName(char name)
