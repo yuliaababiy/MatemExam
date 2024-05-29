@@ -128,12 +128,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="PointCartesianSet.cpp" />
-    <ClCompile Include="NamedPointCartesianSet.cpp" />
+    <ClCompile Include="Point.cpp" />
+    <ClCompile Include="NamedPoint.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="NamedPointCartesianSet.h" />
-    <ClInclude Include="PointCartesianSet.h" />
+    <ClInclude Include="NamedPoint.h" />
+    <ClInclude Include="Point.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

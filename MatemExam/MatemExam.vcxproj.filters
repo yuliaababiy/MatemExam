@@ -18,18 +18,18 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PointCartesianSet.cpp">
+    <ClCompile Include="Point.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="NamedPointCartesianSet.cpp">
+    <ClCompile Include="NamedPoint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="PointCartesianSet.h">
+    <ClInclude Include="Point.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NamedPointCartesianSet.h">
+    <ClInclude Include="NamedPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

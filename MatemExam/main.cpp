@@ -1,13 +1,13 @@
 #include <iostream>
 #include <algorithm>
-#include "PointCartesianSet.h"
-#include "NamedPointCartesianSet.h"
+#include "Point.h"
+#include "NamedPoint.h"
 #include <vector>
 #include <fstream>
 #include <set>
 
 
-void displayPointCartesianSet(vector<PointCartesianSet*>& cartesians)
+void displayPoint(vector<Point*>& cartesians)
 {
 	for (auto cartesian : cartesians)
 	{
@@ -16,7 +16,7 @@ void displayPointCartesianSet(vector<PointCartesianSet*>& cartesians)
 	cartesians.clear();
 }
 
-void saveToFile(vector <PointCartesianSet*>& cartesians, string filename)
+void saveToFile(vector <Point*>& cartesians, string filename)
 {
 	ofstream file(filename);
 	for (auto cartesian : cartesians)
@@ -26,21 +26,22 @@ void saveToFile(vector <PointCartesianSet*>& cartesians, string filename)
 }
 
 
-void loadFromFile(vector <PointCartesianSet*>& cartesians, string filename)
+void loadFromFile(vector <Point*>& cartesians, string filename)
 {
 	ifstream file(filename);
 	int x, y;
-	string name;
+	char name;
+	string type;
 	while (file >> type >> x >> y >> name)
 	{
-		if (type == "PointCartesianSet")
+		if (type == "Point")
 		{
-			cartesians.push_back(new PointCartesianSet(x, y));
+			cartesians.push_back(new Point(x, y));
 		}
-		else if (type == "NamedPointCartesianSet")
+		else if (type == "NamedPoint")
 		{
-			file >> namedPointCartesianSet;
-			cartesians.push_back(new NamedPointCartesianSet(x, y, name ));
+			file >> name;
+			cartesians.push_back(new NamedPoint(x, y, name ));
 		}
 	}
 }
