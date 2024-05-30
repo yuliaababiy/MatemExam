@@ -4,14 +4,16 @@
 #include <iostream>
 using namespace std;
 
-class NamedPoint : public Point
+template <typename T>
+
+class NamedPoint : public Point<T>
 {
-protected:
-    char name;
+string name;
 public:
-    NamedPoint(int x, int y, char name);
+    NamedPoint(T x = 0, T y= 0, string name= " ");
     void displayIntoFile(ostream& out) override;
     void display() override;
     void setName(char name);
+    void saveWithSpaces(ostream& out) override;
 };
 #endif
